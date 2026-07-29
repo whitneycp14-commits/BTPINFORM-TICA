@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #001e40;
+  --color-primary-container: #003366;
+  --color-secondary: #420610;
+  --color-secondary-container: #590a16;
+  --color-tertiary: #2a1b00;
+  --color-tertiary-container: #452f00;
+  --color-tertiary-fixed: #ffdea8;
+  --color-tertiary-fixed-dim: #f5be54;
+  --color-ochre: #420610;
+  --color-on-secondary-fixed-variant: #420610;
+  --color-background: #f9f9f9;
+  --color-surface: #ffffff;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-high: #e8e8e8;
+  --color-on-surface-variant: #43474f;
+  --color-outline-variant: #c3c6d1;
+  --color-on-tertiary-fixed: #271900;
+  --color-on-tertiary-fixed-variant: #5e4200;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 9999px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: #1b1b1b;
+}
+
+/* Custom transitions and layout helpers */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+@media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+@media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
